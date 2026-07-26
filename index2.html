@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karen Wu — Data Analyst Portfolio</title>
+<link rel="stylesheet" href="./styles.css">
+<template id="__bundler_thumbnail"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#FFF6EA"/><circle cx="100" cy="100" r="60" fill="#937B63"/><text x="100" y="112" font-size="48" text-anchor="middle" fill="#FFF6EA" font-family="sans-serif">KW</text></svg></template>
+<style>
+  body{margin:0}
+  a{color:inherit}
+  .site-link{color:var(--color-accent-700);text-decoration:underline;text-underline-offset:3px}
+  .site-link:hover{color:var(--color-accent-800)}
+  ::selection{background:color-mix(in srgb, var(--color-accent) 30%, transparent)}
+  summary::-webkit-details-marker{display:none}
+</style>
+</head>
+<body>
+<div style="background:var(--color-bg);color:var(--color-text);min-height:100vh;--color-accent:#937B63;--color-accent-100:color-mix(in oklch, #937B63 18%, white);--color-accent-600:color-mix(in oklch, #937B63 80%, black);--color-accent-700:color-mix(in oklch, #937B63 65%, black);--color-accent-800:color-mix(in oklch, #937B63 48%, black);">
+
+  <header class="nav" style="position:sticky;top:0;z-index:20;background:color-mix(in srgb, var(--color-bg) 88%, transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--color-divider);padding:var(--space-3) var(--space-8)">
+    <a class="nav-brand" href="#top" style="text-decoration:none;color:var(--color-text)">Karen Wu</a>
+    <nav style="display:flex;align-items:center;gap:var(--space-6)">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-primary" href="./Resume-Karen-Wu.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+  </header>
+
+  <section id="top" style="padding:var(--space-8) var(--space-8) calc(var(--space-8) * 1.4);display:grid;grid-template-columns:1.3fr 0.8fr;gap:var(--space-8);align-items:center;max-width:1180px;margin:0 auto">
+    <div>
+      <div class="tag tag-accent-2" style="margin-bottom:var(--space-4)">Data Analyst · BI · Analytics</div>
+      <h1 style="font-size:56px;max-width:11ch">Turning messy data into decisions people trust.</h1>
+      <p style="font-size:18px;max-width:56ch;opacity:0.85">Hi, I'm Karen, a data analyst who spent 5+ years leading cross-functional product initiatives and is now applying that same rigor to SQL, Python, Tableau and Power BI. I like finding the real driver behind a metric, not just the dashboard that shows it.</p>
+      <div style="display:flex;gap:var(--space-3);margin-top:var(--space-6)">
+        <a class="btn btn-primary" href="#projects">See my projects</a>
+        <a class="btn btn-secondary" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div style="justify-self:end;width:280px;height:280px;border-radius:999px;overflow:hidden;box-shadow:var(--shadow-lg)">
+      <img src="./images/headshot.jpg" alt="Karen Wu" style="width:100%;height:100%;object-fit:cover;object-position:top">
+    </div>
+  </section>
+
+  <section id="about" style="padding:var(--space-8);background:var(--color-surface)">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:0.9fr 1.1fr;gap:var(--space-8)">
+      <div>
+        <h6 style="color:var(--color-accent-700)">About</h6>
+        <h2 style="max-width:10ch">From product strategy to data-driven insight.</h2>
+      </div>
+      <div>
+        <p style="font-size:16px">Technical professional with 5+ years of experience leading cross-functional initiatives, driving product strategy and partnering with executive stakeholders, now expanding into analytics and business intelligence.</p>
+        <p style="font-size:16px">I enjoy turning complex business questions into data-driven insights through SQL, Python, Tableau and Power BI. My approach goes beyond building dashboards: understanding the underlying problem, validating assumptions, uncovering the key drivers behind the data, and communicating findings clearly enough to support confident business decisions.</p>
+        <div style="display:flex;gap:var(--space-6);margin-top:var(--space-6);flex-wrap:wrap">
+          <div>
+            <div style="font-size:12px;text-transform:uppercase;letter-spacing:0.08em;opacity:0.6">Education</div>
+            <div style="font-weight:600;margin-top:4px">M.S. Data Science | Eastern University</div>
+            <div style="font-size:13px;opacity:0.7">Expected September 2026</div>
+            <div style="font-weight:600;margin-top:10px">B.S. Computer Science | UC San Diego</div>
+          </div>
+          <div>
+            <div style="font-size:12px;text-transform:uppercase;letter-spacing:0.08em;opacity:0.6">Toolkit</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;max-width:280px">
+              <span class="tag tag-accent-2">SQL</span>
+              <span class="tag tag-accent">Python</span>
+              <span class="tag tag-accent-2">Tableau</span>
+              <span class="tag tag-accent">Power BI</span>
+              <span class="tag tag-accent-2">DAX</span>
+              <span class="tag tag-accent">Power Query</span>
+              <span class="tag tag-accent-2">Statistics</span>
+              <span class="tag tag-accent">Excel</span>
+              <span class="tag tag-accent-2">Jupyter</span>
+              <span class="tag tag-accent">dbt</span>
+              <span class="tag tag-accent-2">Mixpanel</span>
+              <span class="tag tag-accent">Pendo</span>
+              <span class="tag tag-accent-2">Datadog</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" style="padding:var(--space-8) var(--space-8) calc(var(--space-8) * 1.6)">
+    <div style="max-width:1180px;margin:0 auto">
+      <h6 style="color:var(--color-accent-700)">Projects</h6>
+      <h2 style="margin-bottom:var(--space-6)">Selected data analysis work</h2>
+
+        <article class="card elev-sm" style="display:grid;grid-template-columns:280px 1fr;gap:var(--space-6);padding:var(--space-6);margin-bottom:var(--space-6);align-items:start">
+          <div style="width:100%;aspect-ratio:4/3;border-radius:var(--radius-md);overflow:hidden;position:relative;background:var(--color-neutral-200)">
+            <div class="carousel" data-count="5" data-idx="0" style="width:100%;height:100%;position:relative">
+              <div class="carousel-img" style="width:100%;height:100%;background-image:url('./images/p1-1.png');background-size:cover;background-position:center"></div>
+              <button class="carousel-prev" aria-label="Previous screenshot" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:999px;border:none;background:rgba(0,0,0,0.45);color:#fff;cursor:pointer;font-size:18px;line-height:1;display:flex;align-items:center;justify-content:center">‹</button>
+              <button class="carousel-next" aria-label="Next screenshot" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:999px;border:none;background:rgba(0,0,0,0.45);color:#fff;cursor:pointer;font-size:18px;line-height:1;display:flex;align-items:center;justify-content:center">›</button>
+              <div class="carousel-dots" style="position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:6px">
+                <div class="carousel-dot" style="width:6px;height:6px;border-radius:999px;background:var(--color-accent)"></div><div class="carousel-dot" style="width:6px;height:6px;border-radius:999px;background:rgba(255,255,255,0.6)"></div><div class="carousel-dot" style="width:6px;height:6px;border-radius:999px;background:rgba(255,255,255,0.6)"></div><div class="carousel-dot" style="width:6px;height:6px;border-radius:999px;background:rgba(255,255,255,0.6)"></div><div class="carousel-dot" style="width:6px;height:6px;border-radius:999px;background:rgba(255,255,255,0.6)"></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:var(--space-2)">
+              <span class="tag tag-accent-2">Power BI</span>
+              <span class="tag tag-accent">Python</span>
+              <span class="tag tag-accent-2">DAX</span>
+            </div>
+            <h3 style="margin-bottom:6px;display:flex;align-items:center;gap:8px">E-Commerce Customer Satisfaction Analysis<a href="https://github.com/karenlywu/olist-power-bi-stats-analysis" target="_blank" rel="noopener" title="View on GitHub" aria-label="GitHub repo" style="color:var(--color-neutral-600);display:inline-flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.44-2.28 1.18-3.08-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.15 1.18a10.8 10.8 0 0 1 5.73 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.74.11 3.03.74.8 1.18 1.83 1.18 3.08 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></a></h3>
+            <p style="opacity:0.8;font-size:15px">Built an end-to-end e-commerce analysis in Power BI and Python, using Power Query, DAX and statistical analysis to identify the key drivers of customer satisfaction.</p>
+            <details style="margin-top:var(--space-2)">
+              <summary class="btn btn-ghost" style="display:inline-block;padding-left:0;cursor:pointer;list-style:none">View case study +</summary>
+              <div style="margin-top:var(--space-4);display:flex;flex-direction:column;gap:var(--space-3);border-top:1px solid var(--color-divider);padding-top:var(--space-4)">
+                <div><div class="card-kicker">Problem</div><p style="margin:4px 0 0;font-size:14px;opacity:0.85">Which operational factors most meaningfully predict customer review score and is delivery timing actually the lever it appears to be once price and freight cost are controlled for?</p></div>
+                <div><div class="card-kicker">Approach</div><p style="margin:4px 0 0;font-size:14px;opacity:0.85">Cleaned and modeled the data in Power Query, built DAX measures for the key metrics, then ran statistical analysis in Python to test candidate drivers rather than assume them.</p></div>
+                <div><div class="card-kicker">Result</div><p style="margin:4px 0 0;font-size:14px;opacity:0.85">Surfaced the factors with real statistical influence on satisfaction and packaged them into a Power BI dashboard stakeholders could act on.</p></div>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="card elev-sm" style="display:grid;grid-template-columns:280px 1fr;gap:var(--space-6);padding:var(--space-6);margin-bottom:var(--space-6);align-items:start">
+          <div style="width:100%;aspect-ratio:4/3;border-radius:var(--radius-md);overflow:hidden;position:relative;background:var(--color-neutral-200)">
+            <div style="width:100%;height:100%;background-image:url('./images/p2-1.png');background-size:cover;background-position:center"></div>
+          </div>
+          <div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:var(--space-2)">
+              <span class="tag tag-accent-2">SQL</span>
+              <span class="tag tag-accent">Tableau</span>
+            </div>
+            <h3 style="margin-bottom:6px;display:flex;align-items:center;gap:8px">California County Fiscal Trend Reliability Analysis<a href="https://github.com/karenlywu/california_county_fiscal_trend_reliability_analysis" target="_blank" rel="noopener" title="View on GitHub" aria-label="GitHub repo" style="color:var(--color-neutral-600);display:inline-flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.44-2.28 1.18-3.08-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.15 1.18a10.8 10.8 0 0 1 5.73 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.74.11 3.03.74.8 1.18 1.83 1.18 3.08 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></a><a href="https://public.tableau.com/app/profile/karen.wu6142/viz/CACountyFiscalTrendReliabilityAnalysis/CaliforniaCountyFiscalTrends2003-2024SeparatingSignalfromNoise" target="_blank" rel="noopener" title="View on Tableau Public" aria-label="Tableau dashboard" style="color:var(--color-neutral-600);display:inline-flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.15 0h1.7v2.4h2.55v1.6h-2.55v3.15h2.98v1.6h-2.98v2.4h-1.7v-2.4H8.17v-1.6h2.98V4H8.17V2.4h2.98V0zm-6.4 8.15h1.6v2.98H9.3v1.7H6.35v2.98h-1.6v-2.98H1.77v-1.7h2.98V8.15zm12.8 0h1.6v2.98h2.98v1.7h-2.98v2.98h-1.6v-2.98h-2.98v-1.7h2.98V8.15zM11.15 16.3h1.7v2.4h2.55V20.3h-2.55v3.15h-1.7V20.3H8.17v-1.6h2.98V16.3z"/></svg></a></h3>
+            <p style="opacity:0.8;font-size:15px">SQL-driven analysis of 21 years of county financial data, distinguishing genuine fiscal trends from statistical noise using window functions and a custom reliability ratio.</p>
+            <details style="margin-top:var(--space-2)">
+              <summary class="btn btn-ghost" style="display:inline-block;padding-left:0;cursor:pointer;list-style:none">View case study +</summary>
+              <div style="margin-top:var(--space-4);display:flex;flex-direction:column;gap:var(--space-3);border-top:1px solid var(--color-divider);padding-top:var(--space-4)">
+                <div><div class="card-kicker">Problem</div><p style="margin:4px 0 0;font-size:14px;opacity:0.85">Year-to-year swings in county finances can look like meaningful trends when they are really just noise — a risk for anyone making policy calls off them.</p></div>
+                <div><div class="card-kicker">Approach</div><p style="margin:4px 0 0;font-size:14px;opacity:0.85">Built a SQL pipeline over 21 years of data across all 57 counties using window functions, and designed a custom reliability ratio to separate genuine trends from noise.</p></div>
+                <div><div class="card-kicker">Result</div><p style="margin:4px 0 0;font-size:14px;opacity:0.85">A Tableau dashboard that flags which county fiscal trends are statistically reliable versus which are noise.</p></div>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="card elev-sm" style="display:grid;grid-template-columns:280px 1fr;gap:var(--space-6);padding:var(--space-6);margin-bottom:var(--space-6);align-items:start">
+          <div style="width:100%;aspect-ratio:4/3;border-radius:var(--radius-md);overflow:hidden;position:relative;background:var(--color-neutral-200)">
+            <div style="width:100%;height:100%;background-image:url('./images/p3-1.png');background-size:cover;background-position:center"></div>
+          </div>
+          <div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:var(--space-2)">
+              <span class="tag tag-accent-2">Tableau</span>
+              <span class="tag tag-accent">Python</span>
+            </div>
+            <h3 style="margin-bottom:6px;display:flex;align-items:center;gap:8px">California County Spending Efficiency Dashboard<a href="https://github.com/karenlywu/ca-county-spending-analysis" target="_blank" rel="noopener" title="View on GitHub" aria-label="GitHub repo" style="color:var(--color-neutral-600);display:inline-flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.44-2.28 1.18-3.08-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.15 1.18a10.8 10.8 0 0 1 5.73 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.74.11 3.03.74.8 1.18 1.83 1.18 3.08 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></a><a href="https://public.tableau.com/app/profile/karen.wu6142/viz/CA_County_Spending_Efficiency_FY2024_KWu/Dashboard1" target="_blank" rel="noopener" title="View on Tableau Public" aria-label="Tableau dashboard" style="color:var(--color-neutral-600);display:inline-flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.15 0h1.7v2.4h2.55v1.6h-2.55v3.15h2.98v1.6h-2.98v2.4h-1.7v-2.4H8.17v-1.6h2.98V4H8.17V2.4h2.98V0zm-6.4 8.15h1.6v2.98H9.3v1.7H6.35v2.98h-1.6v-2.98H1.77v-1.7h2.98V8.15zm12.8 0h1.6v2.98h2.98v1.7h-2.98v2.98h-1.6v-2.98h-2.98v-1.7h2.98V8.15zM11.15 16.3h1.7v2.4h2.55V20.3h-2.55v3.15h-1.7V20.3H8.17v-1.6h2.98V16.3z"/></svg></a></h3>
+            <p style="opacity:0.8;font-size:15px">Tableau dashboard analyzing per-capita government spending across all 57 California counties, with population-tier normalization to correct for small-county skew.</p>
+            <details style="margin-top:var(--space-2)">
+              <summary class="btn btn-ghost" style="display:inline-block;padding-left:0;cursor:pointer;list-style:none">View case study +</summary>
+              <div style="margin-top:var(--space-4);display:flex;flex-direction:column;gap:var(--space-3);border-top:1px solid var(--color-divider);padding-top:var(--space-4)">
+                <div><div class="card-kicker">Problem</div><p style="margin:4px 0 0;font-size:14px;opacity:0.85">Raw per-capita spending comparisons unfairly penalize small counties, making efficiency comparisons across counties misleading.</p></div>
+                <div><div class="card-kicker">Approach</div><p style="margin:4px 0 0;font-size:14px;opacity:0.85">Used Python to normalize spending by population tier, then built an interactive Tableau dashboard for county-to-county comparison.</p></div>
+                <div><div class="card-kicker">Result</div><p style="margin:4px 0 0;font-size:14px;opacity:0.85">A fairer, tier-adjusted view of government spending efficiency across all 57 counties.</p></div>
+              </div>
+            </details>
+          </div>
+        </article>
+    </div>
+  </section>
+
+  <section id="contact" style="padding:var(--space-8);background:var(--color-surface)">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:var(--space-8);align-items:center">
+      <div>
+        <h6 style="color:var(--color-accent-700)">Contact</h6>
+        <h2 style="max-width:14ch">Open to data analyst and BI roles, let's talk.</h2>
+        <p style="font-size:16px;max-width:50ch;opacity:0.85">I'm looking for opportunities where I can turn data into clear, confident business decisions. Reach out on LinkedIn or check out my GitHub for a closer look at my project execution.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:var(--space-3);min-width:220px">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/karenlywu/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-secondary" href="https://github.com/karenlywu" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-secondary" href="./Resume-Karen-Wu.pdf" target="_blank" rel="noopener">Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:var(--space-6) var(--space-8);text-align:center;font-size:13px;opacity:0.6">Karen Wu | Data Analyst&nbsp;</footer>
+
+</div>
+<script>
+document.querySelectorAll('.carousel').forEach(function(c){
+  var count = parseInt(c.dataset.count, 10);
+  var idx = 0;
+  var img = c.querySelector('.carousel-img');
+  var dots = c.querySelectorAll('.carousel-dot');
+  function render(){
+    img.style.backgroundImage = "url('./images/p1-" + (idx + 1) + ".png')";
+    dots.forEach(function(d,i){ d.style.background = i===idx ? 'var(--color-accent)' : 'rgba(255,255,255,0.6)'; });
+  }
+  c.querySelector('.carousel-prev').addEventListener('click', function(){ idx = (idx - 1 + count) % count; render(); });
+  c.querySelector('.carousel-next').addEventListener('click', function(){ idx = (idx + 1) % count; render(); });
+});
+</script>
+</body>
+</html>
