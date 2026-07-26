@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="./organic-styles.css">
+  <script src="./image-slot.js"></script>
+  <style>
+    body{margin:0}
+    .site-link{color:var(--color-accent-700);text-decoration:underline;text-underline-offset:3px}
+    .site-link:hover{color:var(--color-accent-800)}
+    ::selection{background:color-mix(in srgb, var(--color-accent) 30%, transparent)}
+  </style>
+</helmet>
+
+<div style="{{ rootStyle }}">
+
+  <header class="nav" style="position:sticky;top:0;z-index:20;background:color-mix(in srgb, var(--color-bg) 88%, transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--color-divider);padding:var(--space-3) var(--space-8)">
+    <a class="nav-brand" href="#top" style="text-decoration:none;color:var(--color-text)">Karen Wu</a>
+    <nav style="display:flex;align-items:center;gap:var(--space-6)">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-primary" href="./uploads/Resume-Karen-Wu.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+  </header>
+
+  <section id="top" style="padding:var(--space-8) var(--space-8) calc(var(--space-8) * 1.4);display:grid;grid-template-columns:1.3fr 0.8fr;gap:var(--space-8);align-items:center;max-width:1180px;margin:0 auto">
+    <div>
+      <div class="tag tag-accent-2" style="margin-bottom:var(--space-4)">Data Analyst · BI · Analytics</div>
+      <h1 style="font-size:56px;max-width:11ch">Turning messy data into decisions people trust.</h1>
+      <p style="font-size:18px;max-width:56ch;opacity:0.85">Hi, I'm Karen, a data analyst who spent 5+ years leading cross-functional product initiatives and is now applying that same rigor to SQL, Python, Tableau and Power BI. I like finding the real driver behind a metric, not just the dashboard that shows it.</p>
+      <div style="display:flex;gap:var(--space-3);margin-top:var(--space-6)">
+        <a class="btn btn-primary" href="#projects">See my projects</a>
+        <a class="btn btn-secondary" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div style="justify-self:end;width:280px;height:280px;border-radius:999px;overflow:hidden;box-shadow:var(--shadow-lg)">
+      
+    <image-slot id="hero-portrait" shape="circle" class="washed" placeholder="Drop a portrait photo"></image-slot></div>
+  </section>
+
+  <section id="about" style="padding:var(--space-8);background:var(--color-surface)">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:0.9fr 1.1fr;gap:var(--space-8)">
+      <div>
+        <h6 style="color:var(--color-accent-700)">About</h6>
+        <h2 style="max-width:10ch">From product strategy to data-driven insight.</h2>
+      </div>
+      <div>
+        <p style="font-size:16px">Technical professional with 5+ years of experience leading cross-functional initiatives, driving product strategy and partnering with executive stakeholders, now expanding into analytics and business intelligence.</p>
+        <p style="font-size:16px">I enjoy turning complex business questions into data-driven insights through SQL, Python, Tableau and Power BI. My approach goes beyond building dashboards: understanding the underlying problem, validating assumptions, uncovering the key drivers behind the data, and communicating findings clearly enough to support confident business decisions.</p>
+        <div style="display:flex;gap:var(--space-6);margin-top:var(--space-6);flex-wrap:wrap">
+          <div>
+            <div style="font-size:12px;text-transform:uppercase;letter-spacing:0.08em;opacity:0.6">Education</div>
+            <div style="font-weight:600;margin-top:4px">M.S. Data Science | Eastern University</div>
+            <div style="font-size:13px;opacity:0.7">Expected September 2026</div>
+            <div style="font-weight:600;margin-top:10px">B.S. Computer Science | UC San Diego</div>
+          </div>
+          <div>
+            <div style="font-size:12px;text-transform:uppercase;letter-spacing:0.08em;opacity:0.6">Toolkit</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;max-width:280px">
+              <span class="tag tag-accent">SQL</span>
+              <span class="tag tag-accent">Python</span>
+              <span class="tag tag-accent-2">Tableau</span>
+              <span class="tag tag-accent-2">Power BI</span>
+              <span class="tag tag-neutral">DAX</span>
+              <span class="tag tag-neutral">Power Query</span>
+              <span class="tag tag-neutral">Statistics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" style="padding:var(--space-8) var(--space-8) calc(var(--space-8) * 1.6)">
+    <div style="max-width:1180px;margin:0 auto">
+      <h6 style="color:var(--color-accent-700)">Projects</h6>
+      <h2 style="margin-bottom:var(--space-6)">Selected data analysis work</h2>
+      <sc-for list="{{ projects }}" as="p" hint-placeholder-count="3">
+        <article class="card elev-sm" style="display:grid;grid-template-columns:280px 1fr;gap:var(--space-6);padding:var(--space-6);margin-bottom:var(--space-6);align-items:start">
+          <div style="width:100%;aspect-ratio:4/3;border-radius:var(--radius-md);overflow:hidden">
+            <image-slot id="{{ p.imageId }}" shape="rounded" radius="16" class="washed" placeholder="{{ p.imagePlaceholder }}"></image-slot>
+          </div>
+          <div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:var(--space-2)">
+              <sc-for list="{{ p.tools }}" as="tool" hint-placeholder-count="3">
+                <span class="tag tag-accent-2">{{ tool }}</span>
+              </sc-for>
+            </div>
+            <h3 style="margin-bottom:6px">{{ p.title }}</h3>
+            <p style="opacity:0.8;font-size:15px">{{ p.summary }}</p>
+            <button class="btn btn-ghost" onClick="{{ p.toggle }}" style="padding-left:0;margin-top:var(--space-2)">
+              {{ p.toggleLabel }}
+            </button>
+            <sc-if value="{{ p.expanded }}" hint-placeholder-val="{{ false }}">
+              <div style="margin-top:var(--space-4);display:flex;flex-direction:column;gap:var(--space-3);border-top:1px solid var(--color-divider);padding-top:var(--space-4)">
+                <div>
+                  <div class="card-kicker">Problem</div>
+                  <p style="margin:4px 0 0;font-size:14px;opacity:0.85">{{ p.problem }}</p>
+                </div>
+                <div>
+                  <div class="card-kicker">Approach</div>
+                  <p style="margin:4px 0 0;font-size:14px;opacity:0.85">{{ p.approach }}</p>
+                </div>
+                <div>
+                  <div class="card-kicker">Result</div>
+                  <p style="margin:4px 0 0;font-size:14px;opacity:0.85">{{ p.result }}</p>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="contact" style="padding:var(--space-8);background:var(--color-surface)">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:var(--space-8);align-items:center">
+      <div>
+        <h6 style="color:var(--color-accent-700)">Contact</h6>
+        <h2 style="max-width:14ch">Open to data analyst and BI roles, let's talk.</h2>
+        <p style="font-size:16px;max-width:50ch;opacity:0.85">I'm looking for opportunities where I can turn data into clear, confident business decisions. Reach out on LinkedIn or check out my GitHub for a closer look at my project execution.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:var(--space-3);min-width:220px">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/karenlywu/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-secondary" href="https://github.com/karenlywu" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-secondary" href="./uploads/Resume-Karen-Wu.pdf" target="_blank" rel="noopener">Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:var(--space-6) var(--space-8);text-align:center;font-size:13px;opacity:0.6">Karen Wu | Data Analyst&nbsp;</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#937B63&quot;,&quot;options&quot;:[&quot;#F2AA6C&quot;,&quot;#8A9B68&quot;,&quot;#B6C197&quot;,&quot;#937B63&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;}}">
+const RAW_PROJECTS = [
+  {
+    id: 'p1',
+    title: 'E-Commerce Customer Satisfaction Analysis',
+    tools: ['Power BI', 'Python', 'DAX'],
+    summary: 'Built an end-to-end e-commerce analysis in Power BI and Python, using Power Query, DAX and statistical analysis to identify the key drivers of customer satisfaction.',
+    problem: 'Leadership had satisfaction scores but no clear read on what actually moved them — decisions were being made on hunches.',
+    approach: 'Cleaned and modeled the data in Power Query, built DAX measures for the key metrics, then ran statistical analysis in Python to test candidate drivers rather than assume them.',
+    result: 'Surfaced the factors with real statistical influence on satisfaction and packaged them into a Power BI dashboard stakeholders could act on.',
+    imageId: 'proj-ecommerce',
+    imagePlaceholder: 'Power BI dashboard screenshot'
+  },
+  {
+    id: 'p2',
+    title: 'California County Fiscal Trend Reliability Analysis',
+    tools: ['SQL', 'Tableau'],
+    summary: 'SQL-driven analysis of 21 years of county financial data, distinguishing genuine fiscal trends from statistical noise using window functions and a custom reliability ratio.',
+    problem: 'Year-to-year swings in county finances can look like meaningful trends when they are really just noise — a risk for anyone making policy calls off them.',
+    approach: 'Built a SQL pipeline over 21 years of data across all 57 counties using window functions, and designed a custom reliability ratio to separate genuine trends from noise.',
+    result: 'A Tableau dashboard that flags which county fiscal trends are statistically reliable versus which are noise.',
+    imageId: 'proj-fiscal',
+    imagePlaceholder: 'Tableau dashboard screenshot'
+  },
+  {
+    id: 'p3',
+    title: 'California County Spending Efficiency Dashboard',
+    tools: ['Tableau', 'Python'],
+    summary: 'Tableau dashboard analyzing per-capita government spending across all 57 California counties, with population-tier normalization to correct for small-county skew.',
+    problem: 'Raw per-capita spending comparisons unfairly penalize small counties, making efficiency comparisons across counties misleading.',
+    approach: 'Used Python to normalize spending by population tier, then built an interactive Tableau dashboard for county-to-county comparison.',
+    result: 'A fairer, tier-adjusted view of government spending efficiency across all 57 counties.',
+    imageId: 'proj-spending',
+    imagePlaceholder: 'Tableau dashboard screenshot'
+  }
+];
+
+class Component extends DCLogic {
+  state = { expanded: {} };
+
+  toggle(id) {
+    this.setState(s => ({ expanded: { ...s.expanded, [id]: !s.expanded[id] } }));
+  }
+
+  renderVals() {
+    const projects = RAW_PROJECTS.map(p => ({
+      ...p,
+      expanded: !!this.state.expanded[p.id],
+      toggleLabel: this.state.expanded[p.id] ? 'Hide details −' : 'View case study +',
+      toggle: () => this.toggle(p.id)
+    }));
+    const accent = this.props.accentColor ?? '#F2AA6C';
+    const rootStyle = `background:var(--color-bg);color:var(--color-text);min-height:100vh;`
+      + `--color-accent:${accent};`
+      + `--color-accent-100:color-mix(in oklch, ${accent} 18%, white);`
+      + `--color-accent-600:color-mix(in oklch, ${accent} 80%, black);`
+      + `--color-accent-700:color-mix(in oklch, ${accent} 65%, black);`
+      + `--color-accent-800:color-mix(in oklch, ${accent} 48%, black);`;
+    return { projects, rootStyle };
+  }
+}
+</script>
+</body>
+</html>
